@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Torcida Brasil - loja virtual educacional para torcedores brasileiros." />
+  <title>Torcida Brasil | A loja de quem torce com o coração</title>
+
+  <link rel="icon" href="./assets/images/logo/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <script src="./assets/js/products.js" defer></script>
+  <script src="./assets/js/storage.js" defer></script>
+  <script src="./assets/js/utils.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script src="./assets/js/ui.js" defer></script>
+  <script src="./assets/js/catalog.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="./index.html" class="logo-link" aria-label="Voltar para a página inicial">
+        <img src="./assets/images/logo/logo-torcida-brasil-horizontal-transparente.png" alt="Logo Torcida Brasil" class="site-logo" />
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#produtos">Produtos</a>
+        <a href="#historia">Nossa torcida</a>
+        <a href="#torcida-plus">Torcida Brasil+</a>
+      </nav>
+
+      <a href="./carrinho.html" class="cart-link" aria-label="Abrir carrinho">
+        <img src="./assets/images/icons/cart.svg" alt="" />
+        <span>Carrinho</span>
+        <strong class="cart-count" data-cart-count>0</strong>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text fade-in">
+          <span class="eyebrow">Torcida Brasil</span>
+          <h1>Vista o Brasil. Viva a torcida.</h1>
+          <p>
+            Camisas, agasalhos, bandeiras e acessórios para quem carrega o Brasil no peito antes mesmo de a bola rolar.
+          </p>
+          <div class="hero-actions">
+            <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+            <a href="#historia" class="btn btn-outline">Conhecer a história</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <div class="container benefits-grid">
+        <article class="benefit-card">
+          <img src="./assets/images/icons/truck.svg" alt="" />
+          <div>
+            <h3>Entrega simulada</h3>
+            <p>Frete grátis em pedidos acima de R$ 399,00.</p>
+          </div>
+        </article>
+
+        <article class="benefit-card">
+          <img src="./assets/images/icons/card.svg" alt="" />
+          <div>
+            <h3>Pagamento seguro</h3>
+            <p>Pix, cartão ou débito em checkout educacional.</p>
+          </div>
+        </article>
+
+        <article class="benefit-card">
+          <img src="./assets/images/icons/search.svg" alt="" />
+          <div>
+            <h3>Busca rápida</h3>
+            <p>Filtre por categoria, público, marca e nome.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section" id="historia">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img src="./assets/images/banners/historia-torcida.png" alt="Imagem histórica representando a origem da torcida brasileira" />
+        </div>
+
+        <article class="story-card">
+          <span class="eyebrow">Só o Brasil tem uma torcida</span>
+          <h2>Uma palavra com alma de arquibancada</h2>
+          <p>
+            Em muitos lugares do mundo, quem acompanha um time é chamado de fã, supporter, adepto ou hincha.
+            No Brasil, existe uma palavra com identidade própria: <strong>torcida</strong>.
+          </p>
+          <p>
+            Uma das histórias mais bonitas conta que o termo nasceu nas arquibancadas, quando mulheres acompanhavam
+            os jogos e, tomadas pelo nervosismo, torciam lenços e luvas nas mãos. O gesto virou símbolo de emoção,
+            ansiedade e paixão pelo jogo.
+          </p>
+          <p>
+            Desde então, torcer deixou de ser apenas assistir. Torcer é vibrar, sofrer, acreditar e carregar o Brasil
+            no peito antes mesmo de a bola rolar.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Loja virtual</span>
+          <h2>Produtos da Torcida Brasil</h2>
+          <p>Escolha seu produto, filtre por estilo e monte seu carrinho.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <label class="search-box" for="searchInput">
+            <img src="./assets/images/icons/search.svg" alt="" />
+            <input type="search" id="searchInput" placeholder="Buscar produto..." autocomplete="off" />
+          </label>
+
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="todos">Todas as categorias</option>
+          </select>
+
+          <select id="audienceFilter" aria-label="Filtrar por público">
+            <option value="todos">Todos os públicos</option>
+          </select>
+
+          <select id="brandFilter" aria-label="Filtrar por marca">
+            <option value="todos">Todas as marcas</option>
+          </select>
+
+          <select id="sortFilter" aria-label="Ordenar produtos">
+            <option value="featured">Destaques</option>
+            <option value="lowest">Menor preço</option>
+            <option value="highest">Maior preço</option>
+            <option value="name">Nome A-Z</option>
+          </select>
+        </div>
+
+        <p class="result-count" id="resultCount"></p>
+
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="empty-state hidden" id="emptyState">
+          <h3>Nenhum produto encontrado</h3>
+          <p>Tente mudar a busca ou os filtros selecionados.</p>
+          <button class="btn btn-primary" id="clearFiltersBtn">Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="torcida-plus">
+      <div class="container cta-card">
+        <div>
+          <span class="eyebrow">Torcida Brasil+</span>
+          <h2>Receba ofertas e novidades da loja</h2>
+          <p>Uma área simulada para praticar formulário, validação e experiência de usuário no projeto.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required />
+          <button type="submit" class="btn btn-primary">Participar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="./assets/images/logo/logo-torcida-brasil-horizontal-branco.png" alt="Logo Torcida Brasil" class="footer-logo" />
+        <p>A loja de quem torce com o coração.</p>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>E-mail: contato@torcidabrasil.com.br</p>
+        <p>Atendimento: segunda a sexta, das 9h às 18h</p>
+      </div>
+
+      <div>
+        <h3>Projeto educacional</h3>
+        <p>
+          Este site foi desenvolvido exclusivamente para fins educacionais, como atividade prática de HTML, CSS e JavaScript.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Torcida Brasil. Projeto acadêmico sem fins comerciais.</p>
+      <p>Desenvolvido por Guilherme Ferreira Soares</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

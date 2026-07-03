@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Checkout simulado da loja Torcida Brasil." />
+  <title>Checkout | Torcida Brasil</title>
+
+  <link rel="icon" href="./assets/images/logo/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <script src="./assets/js/products.js" defer></script>
+  <script src="./assets/js/storage.js" defer></script>
+  <script src="./assets/js/utils.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script src="./assets/js/ui.js" defer></script>
+  <script src="./assets/js/checkout.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="./index.html" class="logo-link" aria-label="Voltar para a página inicial">
+        <img src="./assets/images/logo/logo-torcida-brasil-horizontal-transparente.png" alt="Logo Torcida Brasil" class="site-logo" />
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html#produtos">Produtos</a>
+        <a href="./carrinho.html">Carrinho</a>
+        <a href="./index.html#historia">Nossa torcida</a>
+      </nav>
+
+      <a href="./carrinho.html" class="cart-link" aria-label="Abrir carrinho">
+        <img src="./assets/images/icons/cart.svg" alt="" />
+        <span>Carrinho</span>
+        <strong class="cart-count" data-cart-count>0</strong>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="checkout-section">
+      <div class="container">
+        <div class="section-heading align-left">
+          <span class="eyebrow">Compra simulada</span>
+          <h1>Finalizar pedido</h1>
+          <p>Preencha os dados para concluir a experiência de checkout do projeto.</p>
+        </div>
+
+        <div class="checkout-layout">
+          <form class="checkout-form" id="checkoutForm">
+            <fieldset>
+              <legend>Dados do comprador</legend>
+
+              <div class="form-grid">
+                <label>
+                  Nome completo
+                  <input type="text" id="customerName" name="customerName" placeholder="Seu nome" required />
+                </label>
+
+                <label>
+                  E-mail
+                  <input type="email" id="customerEmail" name="customerEmail" placeholder="seuemail@email.com" required />
+                </label>
+
+                <label>
+                  Telefone
+                  <input type="tel" id="customerPhone" name="customerPhone" placeholder="DDD + número" required />
+                </label>
+
+                <label>
+                  CEP
+                  <input type="text" id="customerZip" name="customerZip" placeholder="00000-000" required />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Endereço de entrega</legend>
+
+              <div class="form-grid">
+                <label>
+                  Rua
+                  <input type="text" id="customerStreet" name="customerStreet" placeholder="Nome da rua" required />
+                </label>
+
+                <label>
+                  Número
+                  <input type="text" id="customerNumber" name="customerNumber" placeholder="123" required />
+                </label>
+
+                <label>
+                  Cidade
+                  <input type="text" id="customerCity" name="customerCity" placeholder="Sua cidade" required />
+                </label>
+
+                <label>
+                  Estado
+                  <input type="text" id="customerState" name="customerState" placeholder="UF" maxlength="2" required />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Forma de pagamento</legend>
+
+              <div class="payment-options">
+                <label class="payment-card">
+                  <input type="radio" name="paymentMethod" value="Pix" checked />
+                  <img src="./assets/images/icons/pix.svg" alt="" />
+                  Pix
+                </label>
+
+                <label class="payment-card">
+                  <input type="radio" name="paymentMethod" value="Cartão de crédito" />
+                  <img src="./assets/images/icons/card.svg" alt="" />
+                  Cartão
+                </label>
+
+                <label class="payment-card">
+                  <input type="radio" name="paymentMethod" value="Débito" />
+                  <img src="./assets/images/icons/card.svg" alt="" />
+                  Débito
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary full">Confirmar pedido</button>
+            <a href="./carrinho.html" class="btn btn-light full">Voltar ao carrinho</a>
+          </form>
+
+          <aside class="order-summary checkout-summary">
+            <h2>Resumo do pedido</h2>
+            <div id="checkoutItems"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="checkoutSubtotal">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row discount">
+              <span>Descontos</span>
+              <strong id="checkoutDiscount">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Frete</span>
+              <strong id="checkoutShipping">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row total">
+              <span>Total</span>
+              <strong id="checkoutTotal">R$ 0,00</strong>
+            </div>
+
+            <p class="summary-help">Checkout criado apenas para simulação educacional.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 Torcida Brasil. Site desenvolvido exclusivamente para fins educacionais, sem fins comerciais.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carrinho de compras da loja Torcida Brasil." />
+  <title>Carrinho | Torcida Brasil</title>
+
+  <link rel="icon" href="./assets/images/logo/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <script src="./assets/js/products.js" defer></script>
+  <script src="./assets/js/storage.js" defer></script>
+  <script src="./assets/js/utils.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script src="./assets/js/ui.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="./index.html" class="logo-link" aria-label="Voltar para a página inicial">
+        <img src="./assets/images/logo/logo-torcida-brasil-horizontal-transparente.png" alt="Logo Torcida Brasil" class="site-logo" />
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html#produtos">Produtos</a>
+        <a href="./index.html#historia">Nossa torcida</a>
+        <a href="./index.html#torcida-plus">Torcida Brasil+</a>
+      </nav>
+
+      <a href="./carrinho.html" class="cart-link active" aria-label="Abrir carrinho">
+        <img src="./assets/images/icons/cart.svg" alt="" />
+        <span>Carrinho</span>
+        <strong class="cart-count" data-cart-count>0</strong>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="cart-section">
+      <div class="container">
+        <div class="section-heading align-left">
+          <span class="eyebrow">Seu pedido</span>
+          <h1>Carrinho de compras</h1>
+          <p>Revise seus produtos antes de finalizar a compra simulada.</p>
+        </div>
+
+        <div class="cart-layout">
+          <div class="cart-items" id="cartItems"></div>
+
+          <aside class="order-summary" id="orderSummary">
+            <h2>Resumo</h2>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="subtotalValue">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row discount">
+              <span>Descontos</span>
+              <strong id="discountValue">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Frete</span>
+              <strong id="shippingValue">R$ 0,00</strong>
+            </div>
+
+            <div class="summary-row total">
+              <span>Total</span>
+              <strong id="totalValue">R$ 0,00</strong>
+            </div>
+
+            <p class="summary-help">Frete grátis para pedidos acima de R$ 399,00.</p>
+
+            <a href="./checkout.html" class="btn btn-primary full" id="checkoutButton">Finalizar compra</a>
+            <a href="./index.html#produtos" class="btn btn-light full">Continuar comprando</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 Torcida Brasil. Site desenvolvido exclusivamente para fins educacionais, sem fins comerciais.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

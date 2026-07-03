@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Detalhes do produto na loja Torcida Brasil." />
+  <title>Produto | Torcida Brasil</title>
+
+  <link rel="icon" href="./assets/images/logo/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <script src="./assets/js/products.js" defer></script>
+  <script src="./assets/js/storage.js" defer></script>
+  <script src="./assets/js/utils.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script src="./assets/js/ui.js" defer></script>
+  <script src="./assets/js/product-detail.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="./index.html" class="logo-link" aria-label="Voltar para a página inicial">
+        <img src="./assets/images/logo/logo-torcida-brasil-horizontal-transparente.png" alt="Logo Torcida Brasil" class="site-logo" />
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html#produtos">Produtos</a>
+        <a href="./index.html#historia">Nossa torcida</a>
+        <a href="./index.html#torcida-plus">Torcida Brasil+</a>
+      </nav>
+
+      <a href="./carrinho.html" class="cart-link" aria-label="Abrir carrinho">
+        <img src="./assets/images/icons/cart.svg" alt="" />
+        <span>Carrinho</span>
+        <strong class="cart-count" data-cart-count>0</strong>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="product-detail-section">
+      <div class="container">
+        <a href="./index.html#produtos" class="back-link">← Voltar para a loja</a>
+
+        <div class="product-detail-grid" id="productDetail"></div>
+
+        <section class="related-section">
+          <div class="section-heading small">
+            <span class="eyebrow">Veja também</span>
+            <h2>Produtos relacionados</h2>
+          </div>
+          <div class="products-grid compact" id="relatedProducts"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 Torcida Brasil. Site desenvolvido exclusivamente para fins educacionais, sem fins comerciais.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
